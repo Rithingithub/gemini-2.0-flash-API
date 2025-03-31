@@ -120,6 +120,11 @@ app.get('/api/chat', (req, res) => {
     res.json(chatHistory);
 });
 
+// api home
+app.get('/', (req, res) => {
+    res.send('API is running...');
+});
+
 // Clear chat history
 app.delete('/api/chat', (req, res) => {
     chatHistory = [];
